@@ -5,14 +5,19 @@
  */
 package manriqueamador_examen2;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Astronauta {
+public class Astronauta implements Serializable{
+    
+    private static final long SerialVersionUID = 17;
     
     private String nombre,nacionalidad,experiencia,sexo;
     private double sueldo,peso;
+    private boolean agregado = false;
 
     public Astronauta(String nombre, String nacionalidad, String experiencia, String sexo, double sueldo, double peso) {
         this.nombre = nombre;
@@ -25,6 +30,16 @@ public class Astronauta {
 
     public Astronauta() {
     }
+
+    public boolean isAgregado() {
+        return agregado;
+    }
+
+    public void setAgregado(boolean agregado) {
+        this.agregado = agregado;
+    }
+    
+    
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

@@ -5,26 +5,42 @@
  */
 package manriqueamador_examen2;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class SondaEspacial extends NaveEspacial{
+public class SondaEspacial extends NaveEspacial implements Serializable{
+    
+    private static final long SerialVersionUID = 17;
     
     private String material;
     private double peso;
 
-    public SondaEspacial(String material, double peso) {
+    public SondaEspacial(String material, double peso, String numSerie, Planeta planetaDestino, double velocidad) {
+        super(numSerie, planetaDestino, velocidad);
         this.material = material;
         this.peso = peso;
     }
+
+    
 
     @Override
     public String toString() {
         return super.toString();
     }
     
-    
+    @Override
+    public double [] calcularTiempo(){
+        double [] valores = new double [2];
+        double ida,vuelta;
+        ida = this.getPlanetaDestino().getDistanciaTierra()/this.getVelocidad();
+        vuelta = 9.8*ida;
+        valores[0] = ida;
+        valores[1] = vuelta;
+        return valores;
+    }
 
     public void setMaterial(String material) {
         this.material = material;

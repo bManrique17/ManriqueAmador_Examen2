@@ -5,11 +5,15 @@
  */
 package manriqueamador_examen2;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Planeta {
+public class Planeta implements Serializable{
+    
+    private static final long SerialVersionUID = 17;
     
     private String nombre,tipoSuperficie;
     private boolean anillos;
