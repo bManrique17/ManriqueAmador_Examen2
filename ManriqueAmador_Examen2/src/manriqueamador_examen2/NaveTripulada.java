@@ -33,6 +33,7 @@ public class NaveTripulada extends NaveEspacial implements Serializable{
         for (Astronauta a : this.listAstronautas) {
             sumatoria += a.getPeso();
         }
+        
         sumaPesosI=(sumatoria*sumatoria)/100;
         sumaPesosV=sumatoria/100;
         ida =  ( this.getPlanetaDestino().getDistanciaTierra() / (this.getVelocidad() * sumaPesosI)  );
