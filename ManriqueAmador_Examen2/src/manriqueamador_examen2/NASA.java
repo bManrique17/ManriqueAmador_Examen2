@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -36,12 +37,63 @@ public class NASA extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel7 = new javax.swing.JPanel();
-        jDialog1 = new javax.swing.JDialog();
+        ModificarAstronauta = new javax.swing.JDialog();
+        tf_sexo1 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jb_modificarAstronauta = new javax.swing.JButton();
+        tf_pesoAstronauta1 = new javax.swing.JTextField();
+        tf_experiencia1 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        tf_nombreAstronauta1 = new javax.swing.JTextField();
+        tf_nacionalidad1 = new javax.swing.JTextField();
+        tf_sueldo1 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
         ModificarEliminar = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        Modificar = new javax.swing.JMenuItem();
+        Eliminar = new javax.swing.JMenuItem();
+        ModificarPlaneta = new javax.swing.JDialog();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jb_modificarPlaneta = new javax.swing.JButton();
+        tf_distanciaTierra1 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        rd_anillos1 = new javax.swing.JRadioButton();
+        jLabel42 = new javax.swing.JLabel();
+        tf_nombrePlaneta1 = new javax.swing.JTextField();
+        tf_tempMedia1 = new javax.swing.JTextField();
+        tf_tipoSuperficie1 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        ModificarNave = new javax.swing.JDialog();
+        jLabel44 = new javax.swing.JLabel();
+        tf_numeroSerieNave1 = new javax.swing.JTextField();
+        tf_velocidadNave1 = new javax.swing.JTextField();
+        tf_lugarDespejeNave1 = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jb_modificarNave = new javax.swing.JButton();
+        cb_planetaDestinoNave1 = new javax.swing.JComboBox<>();
+        cb_astronautaNave1 = new javax.swing.JComboBox<>();
+        jLabel49 = new javax.swing.JLabel();
+        agregar2 = new javax.swing.JButton();
+        ModificarSonda = new javax.swing.JDialog();
+        cb_planetaDestinoSonda1 = new javax.swing.JComboBox<>();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jb_modificarSonda = new javax.swing.JButton();
+        tf_numeroSerieSonda1 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        tf_velocidadSonda1 = new javax.swing.JTextField();
+        tf_pesoSonda1 = new javax.swing.JTextField();
+        tf_materialSonda1 = new javax.swing.JTextField();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
         Expedicion = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -132,24 +184,424 @@ public class NASA extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jLabel32.setText("Experiencia");
+
+        jLabel33.setText("Sexo");
+
+        jb_modificarAstronauta.setText("Modificar");
+        jb_modificarAstronauta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_modificarAstronautaActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Peso");
+
+        jLabel35.setText("MODIFICAR ASTRONAUTAS");
+
+        jLabel36.setText("Nombre");
+
+        tf_nombreAstronauta1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tf_nombreAstronauta1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        tf_sueldo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_sueldo1ActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setText("Nacionalidad");
+
+        jLabel38.setText("Sueldo");
+
+        javax.swing.GroupLayout ModificarAstronautaLayout = new javax.swing.GroupLayout(ModificarAstronauta.getContentPane());
+        ModificarAstronauta.getContentPane().setLayout(ModificarAstronautaLayout);
+        ModificarAstronautaLayout.setHorizontalGroup(
+            ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarAstronautaLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ModificarAstronautaLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ModificarAstronautaLayout.createSequentialGroup()
+                        .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel37)
+                            .addComponent(jLabel38)
+                            .addComponent(jLabel32)
+                            .addComponent(jLabel33)
+                            .addComponent(jLabel34))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tf_sexo1)
+                            .addComponent(tf_nombreAstronauta1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_nacionalidad1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_sueldo1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_experiencia1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_pesoAstronauta1)
+                            .addGroup(ModificarAstronautaLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jb_modificarAstronauta, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)))))
+                .addGap(49, 49, 49))
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        ModificarAstronautaLayout.setVerticalGroup(
+            ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarAstronautaLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel35)
+                .addGap(20, 20, 20)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_nombreAstronauta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel36))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(tf_nacionalidad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_sueldo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38))
+                .addGap(18, 18, 18)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_experiencia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel32))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_sexo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ModificarAstronautaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_pesoAstronauta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel34))
+                .addGap(34, 34, 34)
+                .addComponent(jb_modificarAstronauta, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        jMenuItem1.setText("jMenuItem1");
+        Modificar.setText("Modificar");
+        Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarActionPerformed(evt);
+            }
+        });
+        ModificarEliminar.add(Modificar);
 
-        jMenuItem2.setText("jMenuItem2");
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
+        ModificarEliminar.add(Eliminar);
 
-        jMenuItem3.setText("jMenuItem3");
+        jLabel39.setText("Tipo de superficie");
 
-        jMenuItem4.setText("jMenuItem4");
+        jLabel40.setText("Distancia con la tierra");
+
+        jb_modificarPlaneta.setText("Modificar");
+        jb_modificarPlaneta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_modificarPlanetaActionPerformed(evt);
+            }
+        });
+
+        jLabel41.setText("MODIFICAR PLANETAS");
+
+        rd_anillos1.setText("Posee anillos");
+
+        jLabel42.setText("Nombre");
+
+        tf_nombrePlaneta1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tf_nombrePlaneta1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        tf_tipoSuperficie1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_tipoSuperficie1ActionPerformed(evt);
+            }
+        });
+
+        jLabel43.setText("Temp. media");
+
+        javax.swing.GroupLayout ModificarPlanetaLayout = new javax.swing.GroupLayout(ModificarPlaneta.getContentPane());
+        ModificarPlaneta.getContentPane().setLayout(ModificarPlanetaLayout);
+        ModificarPlanetaLayout.setHorizontalGroup(
+            ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarPlanetaLayout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ModificarPlanetaLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ModificarPlanetaLayout.createSequentialGroup()
+                        .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel42)
+                            .addComponent(jLabel43)
+                            .addComponent(jLabel39)
+                            .addComponent(jLabel40))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_nombrePlaneta1)
+                            .addComponent(tf_tempMedia1)
+                            .addComponent(tf_tipoSuperficie1)
+                            .addComponent(tf_distanciaTierra1)
+                            .addGroup(ModificarPlanetaLayout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(rd_anillos1)
+                                .addGap(0, 44, Short.MAX_VALUE)))))
+                .addGap(160, 160, 160))
+            .addGroup(ModificarPlanetaLayout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(jb_modificarPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        ModificarPlanetaLayout.setVerticalGroup(
+            ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarPlanetaLayout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(jLabel41)
+                .addGap(20, 20, 20)
+                .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_nombrePlaneta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43)
+                    .addComponent(tf_tempMedia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_tipoSuperficie1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39))
+                .addGap(18, 18, 18)
+                .addGroup(ModificarPlanetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_distanciaTierra1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel40))
+                .addGap(29, 29, 29)
+                .addComponent(rd_anillos1)
+                .addGap(46, 46, 46)
+                .addComponent(jb_modificarPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+
+        jLabel44.setText("Numero de serie");
+
+        tf_numeroSerieNave1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tf_numeroSerieNave1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        tf_lugarDespejeNave1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_lugarDespejeNave1ActionPerformed(evt);
+            }
+        });
+
+        jLabel45.setText("Velocidad");
+
+        jLabel46.setText("Lugar de despeje");
+
+        jLabel47.setText("Planeta de destino");
+
+        jLabel48.setText("Astronautas");
+
+        jb_modificarNave.setText("Modificar");
+        jb_modificarNave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_modificarNaveActionPerformed(evt);
+            }
+        });
+
+        cb_planetaDestinoNave1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cb_astronautaNave1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel49.setText("MODIFICAR NAVE TRIPULADA");
+
+        agregar2.setText("Agregar");
+        agregar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregar2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ModificarNaveLayout = new javax.swing.GroupLayout(ModificarNave.getContentPane());
+        ModificarNave.getContentPane().setLayout(ModificarNaveLayout);
+        ModificarNaveLayout.setHorizontalGroup(
+            ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarNaveLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ModificarNaveLayout.createSequentialGroup()
+                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ModificarNaveLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel48)
+                            .addComponent(jLabel47)
+                            .addComponent(jLabel44)
+                            .addComponent(jLabel45)
+                            .addComponent(jLabel46))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_numeroSerieNave1)
+                            .addComponent(tf_velocidadNave1)
+                            .addComponent(tf_lugarDespejeNave1)
+                            .addGroup(ModificarNaveLayout.createSequentialGroup()
+                                .addComponent(jb_modificarNave, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(cb_planetaDestinoNave1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb_astronautaNave1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(agregar2)))
+                .addGap(44, 44, 44))
+        );
+        ModificarNaveLayout.setVerticalGroup(
+            ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarNaveLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel49)
+                .addGap(20, 20, 20)
+                .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_numeroSerieNave1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(tf_velocidadNave1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_lugarDespejeNave1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel46))
+                .addGap(24, 24, 24)
+                .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(cb_planetaDestinoNave1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(ModificarNaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel48)
+                    .addComponent(cb_astronautaNave1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(agregar2))
+                .addGap(85, 85, 85)
+                .addComponent(jb_modificarNave, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        cb_planetaDestinoSonda1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel50.setText("Material");
+
+        jLabel51.setText("Numero de serie");
+
+        jb_modificarSonda.setText("Modificar");
+        jb_modificarSonda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_modificarSondaActionPerformed(evt);
+            }
+        });
+
+        tf_numeroSerieSonda1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tf_numeroSerieSonda1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jLabel52.setText("MODIFICAR SONDA ESPACIAL");
+
+        tf_materialSonda1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_materialSonda1ActionPerformed(evt);
+            }
+        });
+
+        jLabel53.setText("Velocidad");
+
+        jLabel54.setText("Planeta de destino");
+
+        jLabel55.setText("Peso");
+
+        javax.swing.GroupLayout ModificarSondaLayout = new javax.swing.GroupLayout(ModificarSonda.getContentPane());
+        ModificarSonda.getContentPane().setLayout(ModificarSondaLayout);
+        ModificarSondaLayout.setHorizontalGroup(
+            ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarSondaLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ModificarSondaLayout.createSequentialGroup()
+                        .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel55)
+                            .addComponent(jLabel54)
+                            .addComponent(jLabel51)
+                            .addComponent(jLabel53)
+                            .addComponent(jLabel50))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_numeroSerieSonda1)
+                            .addComponent(tf_velocidadSonda1)
+                            .addComponent(tf_materialSonda1)
+                            .addComponent(jb_modificarSonda, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_planetaDestinoSonda1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tf_pesoSonda1))
+                        .addGap(63, 63, 63))
+                    .addGroup(ModificarSondaLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        ModificarSondaLayout.setVerticalGroup(
+            ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModificarSondaLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel52)
+                .addGap(18, 18, 18)
+                .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_numeroSerieSonda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel51))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel53)
+                    .addComponent(tf_velocidadSonda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_materialSonda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel50))
+                .addGap(24, 24, 24)
+                .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel54)
+                    .addComponent(cb_planetaDestinoSonda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(ModificarSondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel55)
+                    .addComponent(tf_pesoSonda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(87, 87, 87)
+                .addComponent(jb_modificarSonda, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -258,7 +710,7 @@ public class NASA extends javax.swing.JFrame {
                     .addComponent(jLabel12))
                 .addGap(76, 76, 76)
                 .addComponent(jb_crearAstronauta, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         Expedicion.addTab("Crear Astronauta", jPanel3);
@@ -367,7 +819,7 @@ public class NASA extends javax.swing.JFrame {
                     .addComponent(agregar1))
                 .addGap(85, 85, 85)
                 .addComponent(jb_crearNave, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         Expedicion.addTab("Crear Nave Tripulada", jPanel4);
@@ -464,7 +916,7 @@ public class NASA extends javax.swing.JFrame {
                     .addComponent(tf_pesoSonda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(87, 87, 87)
                 .addComponent(jb_crearSonda, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         Expedicion.addTab("Crear Sonda Espacial", jPanel5);
@@ -477,6 +929,11 @@ public class NASA extends javax.swing.JFrame {
                 "Serie", "Planeta Destino", "Velocidad", "Material", "Peso"
             }
         ));
+        tablaSondas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaSondasMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tablaSondas);
 
         tablaNaves.setModel(new javax.swing.table.DefaultTableModel(
@@ -487,6 +944,11 @@ public class NASA extends javax.swing.JFrame {
                 "Serie", "Planeta Destino", "Velocidad", "Lugar de Despeje"
             }
         ));
+        tablaNaves.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaNavesMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tablaNaves);
 
         tablaAstronautas.setModel(new javax.swing.table.DefaultTableModel(
@@ -497,6 +959,11 @@ public class NASA extends javax.swing.JFrame {
                 "Nombre", "Nacinalidad", "Sueldo", "Experiencia", "Sexo", "Peso"
             }
         ));
+        tablaAstronautas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaAstronautasMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(tablaAstronautas);
 
         tablaPlanetas.setModel(new javax.swing.table.DefaultTableModel(
@@ -507,6 +974,11 @@ public class NASA extends javax.swing.JFrame {
                 "Nombre", "TempMedia", "Anillos", "Superficie", "DistanciaTierra"
             }
         ));
+        tablaPlanetas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaPlanetasMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(tablaPlanetas);
 
         jLabel25.setText("Planetas");
@@ -577,7 +1049,7 @@ public class NASA extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_guardar)
                     .addComponent(jb_cargar))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         Expedicion.addTab("Inventario", jPanel6);
@@ -650,7 +1122,7 @@ public class NASA extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         Expedicion.addTab("Expedicion", jPanel1);
@@ -746,7 +1218,7 @@ public class NASA extends javax.swing.JFrame {
                 .addComponent(rd_anillos)
                 .addGap(89, 89, 89)
                 .addComponent(jb_crearPlaneta, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         Expedicion.addTab("Crear Planeta", jPanel2);
@@ -759,7 +1231,7 @@ public class NASA extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Expedicion, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE)
+            .addComponent(Expedicion)
         );
 
         pack();
@@ -833,12 +1305,12 @@ public class NASA extends javax.swing.JFrame {
         //public SondaEspacial(String material, double peso, String numSerie, Planeta planetaDestino, double velocidad) {
 
         SondaEspacial temp = new SondaEspacial(tf_materialSonda.getText(), Double.parseDouble(tf_pesoSonda.getText()),
-        tf_numeroSerieSonda.getText(), ((Planeta) cb_planetaDestinoSonda.getSelectedItem()), Double.parseDouble(tf_velocidadSonda.getText()));
+                tf_numeroSerieSonda.getText(), ((Planeta) cb_planetaDestinoSonda.getSelectedItem()), Double.parseDouble(tf_velocidadSonda.getText()));
         listSondas.add(temp);
         JOptionPane.showMessageDialog(this, "Agregado");
     }//GEN-LAST:event_jb_crearSondaActionPerformed
 
-    public void actualizarInventario(){
+    public void actualizarInventario() {
         DefaultComboBoxModel modeloPlaneta = new DefaultComboBoxModel();
         DefaultComboBoxModel modeloAstronauta = new DefaultComboBoxModel();
         DefaultComboBoxModel modeloNave = new DefaultComboBoxModel();
@@ -848,7 +1320,6 @@ public class NASA extends javax.swing.JFrame {
         DefaultTableModel astronautas = (DefaultTableModel) tablaAstronautas.getModel();
         DefaultTableModel naves = (DefaultTableModel) tablaNaves.getModel();
         DefaultTableModel sondas = (DefaultTableModel) tablaSondas.getModel();
-        
 
         while (planetas.getRowCount() > 0) {
             planetas.removeRow(0);
@@ -870,15 +1341,15 @@ public class NASA extends javax.swing.JFrame {
 
         }
         for (Astronauta a : listAstronautas) {
-            
+
             Object[] temp = {a.getNombre(), a.getNacionalidad(), a.getSueldo(), a.getExperiencia(), a.getSexo(), a.getPeso()};
-                astronautas.addRow(temp);
-            if(a.isAgregado()){
-                
-            }else{
+            astronautas.addRow(temp);
+            if (a.isAgregado()) {
+
+            } else {
                 modeloAstronauta.addElement(a);
             }
-            
+
         }
         for (NaveTripulada n : listNaves) {
             modeloNave.addElement(n);
@@ -899,21 +1370,26 @@ public class NASA extends javax.swing.JFrame {
         CB_planeta.setModel(modeloPlaneta);
         cb_astronautaNave.setModel(modeloAstronauta);
         CB_nave.setModel(modeloNaves);
+
+        cb_planetaDestinoNave1.setModel(modeloPlaneta);
+        cb_planetaDestinoSonda1.setModel(modeloPlaneta);
+        cb_astronautaNave1.setModel(modeloAstronauta);
+
     }
-    
+
     private void ExpedicionStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_ExpedicionStateChanged
-        
+
         actualizarInventario();
 
     }//GEN-LAST:event_ExpedicionStateChanged
 
     private void agregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar1ActionPerformed
-        
-        actualNave.getListAstronautas().add((Astronauta)cb_astronautaNave.getSelectedItem());
-        ((Astronauta)cb_astronautaNave.getSelectedItem()).setAgregado(true);
+
+        actualNave.getListAstronautas().add((Astronauta) cb_astronautaNave.getSelectedItem());
+        ((Astronauta) cb_astronautaNave.getSelectedItem()).setAgregado(true);
         actualizarInventario();
-        
-        
+
+
     }//GEN-LAST:event_agregar1ActionPerformed
 
     private void jb_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_guardarActionPerformed
@@ -925,10 +1401,10 @@ public class NASA extends javax.swing.JFrame {
         try {
             puente.escribirArchivo();
         } catch (IOException ex) {
-            
+
         }
         JOptionPane.showMessageDialog(this, "Guardado");
-                
+
     }//GEN-LAST:event_jb_guardarActionPerformed
 
     private void jb_cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cargarActionPerformed
@@ -943,29 +1419,237 @@ public class NASA extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_cargarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        Expedicion exp = new Expedicion(  ((Planeta) CB_planeta.getSelectedItem()) ,  ((NaveEspacial) CB_nave.getSelectedItem()) , estado );
-        
+
+        Expedicion exp = new Expedicion(((Planeta) CB_planeta.getSelectedItem()), ((NaveEspacial) CB_nave.getSelectedItem()), estado);
+
         exp.start();
-        
-        if(((NaveEspacial) CB_nave.getSelectedItem()) instanceof NaveTripulada){
-            
+
+        if (((NaveEspacial) CB_nave.getSelectedItem()) instanceof NaveTripulada) {
+
             for (Astronauta a : ((NaveTripulada) CB_nave.getSelectedItem()).getListAstronautas()) {
                 a.setAgregado(false);
             }
         }
-        
-        if(((NaveEspacial) CB_nave.getSelectedItem()) instanceof NaveTripulada){
-            
+
+        if (((NaveEspacial) CB_nave.getSelectedItem()) instanceof NaveTripulada) {
+
             listNaves.remove(((NaveTripulada) CB_nave.getSelectedItem()));
-            
-        }else{
+
+        } else {
             listSondas.remove(((SondaEspacial) CB_nave.getSelectedItem()));
         }
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jb_modificarAstronautaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificarAstronautaActionPerformed
+        
+        actualAstronauta.setNombre(tf_nombreAstronauta1.getText());
+        actualAstronauta.setNacionalidad(tf_nacionalidad1.getText());
+        actualAstronauta.setExperiencia(tf_experiencia1.getText());
+        actualAstronauta.setSexo(tf_sexo1.getText());
+        actualAstronauta.setSueldo(Double.parseDouble(tf_sueldo1.getText()));
+        actualAstronauta.setPeso(Double.parseDouble(tf_pesoAstronauta1.getText()));
+        JOptionPane.showMessageDialog(null,"Modificado");
+        
+        
+        
+    }//GEN-LAST:event_jb_modificarAstronautaActionPerformed
+
+    private void tf_nombreAstronauta1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tf_nombreAstronauta1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_nombreAstronauta1AncestorAdded
+
+    private void tf_sueldo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_sueldo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_sueldo1ActionPerformed
+
+    private void jb_modificarPlanetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificarPlanetaActionPerformed
+        actualPlaneta.setNombre(tf_nombreAstronauta1.getText());
+        actualPlaneta.setTempMedia(Double.parseDouble(tf_tempMedia1.getText()));
+        actualPlaneta.setTipoSuperficie(tf_tipoSuperficie1.getText());
+        actualPlaneta.setDistanciaTierra(Double.parseDouble(tf_distanciaTierra1.getText()));
+               
+        JOptionPane.showMessageDialog(null,"Modificado");
+    }//GEN-LAST:event_jb_modificarPlanetaActionPerformed
+
+    private void tf_nombrePlaneta1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tf_nombrePlaneta1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_nombrePlaneta1AncestorAdded
+
+    private void tf_tipoSuperficie1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_tipoSuperficie1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_tipoSuperficie1ActionPerformed
+
+    private void tf_numeroSerieNave1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tf_numeroSerieNave1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_numeroSerieNave1AncestorAdded
+
+    private void tf_lugarDespejeNave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_lugarDespejeNave1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_lugarDespejeNave1ActionPerformed
+
+    private void jb_modificarNaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificarNaveActionPerformed
+        actualNave.setNumSerie(tf_numeroSerieNave1.getText());
+        actualNave.setLugarDespeje(tf_lugarDespejeNave1.getText());
+        actualNave.setPlanetaDestino((Planeta)cb_planetaDestinoNave1.getSelectedItem());
+        actualNave.setVelocidad(Double.parseDouble(tf_velocidadNave1.getText()));
+        
+               
+        JOptionPane.showMessageDialog(null,"Modificado");
+    }//GEN-LAST:event_jb_modificarNaveActionPerformed
+
+    private void agregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_agregar2ActionPerformed
+
+    private void jb_modificarSondaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificarSondaActionPerformed
+        actualSonda.setNumSerie(tf_numeroSerieSonda1.getText());
+        actualSonda.setPlanetaDestino((Planeta)cb_planetaDestinoSonda1.getSelectedItem());
+        actualSonda.setVelocidad(Double.parseDouble(tf_velocidadSonda1.getText()));
+        actualSonda.setMaterial(tf_materialSonda1.getText());
+        actualSonda.setPeso(Double.parseDouble(tf_pesoSonda1.getText()));
+               
+        JOptionPane.showMessageDialog(null,"Modificado");
+    }//GEN-LAST:event_jb_modificarSondaActionPerformed
+
+    private void tf_numeroSerieSonda1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tf_numeroSerieSonda1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_numeroSerieSonda1AncestorAdded
+
+    private void tf_materialSonda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_materialSonda1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_materialSonda1ActionPerformed
+
+    private void tablaPlanetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaPlanetasMouseClicked
+        if (evt.isMetaDown()) {
+            ModificarEliminar.show(evt.getComponent(), evt.getX(), evt.getY());
+            actualTabla = tablaPlanetas;
+        }
+    }//GEN-LAST:event_tablaPlanetasMouseClicked
+
+    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
+
+        if (actualTabla == tablaPlanetas) {
+            int pos = actualTabla.getSelectedRow();
+            actualPlaneta = listPlanetas.get(pos);
+            ModificarPlaneta.setVisible(true);
+            ModificarPlaneta.pack();
+
+            tf_nombrePlaneta1.setText(actualPlaneta.getNombre());
+            tf_tipoSuperficie1.setText(actualPlaneta.getTipoSuperficie());
+            tf_distanciaTierra1.setText("" + actualPlaneta.getDistanciaTierra());
+            tf_tempMedia1.setText("" + actualPlaneta.getTempMedia());
+        } else {
+            if (actualTabla == tablaAstronautas) {
+                int pos = actualTabla.getSelectedRow();
+                System.out.println("POS ASTRO: "+pos);
+                actualAstronauta = listAstronautas.get(pos);
+                ModificarAstronauta.setVisible(true);
+                ModificarAstronauta.pack();
+
+                tf_nombreAstronauta1.setText(actualAstronauta.getNombre());
+                tf_nacionalidad1.setText(actualAstronauta.getNacionalidad());
+                tf_experiencia1.setText(actualAstronauta.getExperiencia());
+                tf_sexo1.setText(actualAstronauta.getSexo());
+                tf_sueldo1.setText(actualAstronauta.getSueldo() + "");
+                tf_pesoAstronauta1.setText(actualAstronauta.getPeso() + "");
+            } else {
+                if (actualTabla == tablaNaves) {
+                    DefaultTableModel m = (DefaultTableModel) actualTabla.getModel();
+                    String serial = ((String) m.getValueAt(actualTabla.getSelectedRow(), 0));
+                    for (NaveTripulada n : listNaves) {
+                        if (n.getNumSerie().equals(serial)) {
+                            actualNave = n;
+                            break;
+                        }
+                    }
+                    ModificarNave.setVisible(true);
+                    ModificarNave.pack();
+
+                    tf_numeroSerieNave1.setText(actualNave.getNumSerie());
+                    cb_planetaDestinoNave1.setSelectedItem(actualNave.getPlanetaDestino());
+                    tf_velocidadNave1.setText("" + actualNave.getVelocidad());
+                    tf_lugarDespejeNave1.setText(actualNave.getLugarDespeje());
+
+                } else {
+                    DefaultTableModel m = (DefaultTableModel) actualTabla.getModel();
+                    String serial = ((String) m.getValueAt(actualTabla.getSelectedRow(), 0));
+                    for (SondaEspacial n : listSondas) {
+                        if (n.getNumSerie().equals(serial)) {
+                            actualSonda = n;
+                            break;
+                        }
+                    }
+                    ModificarSonda.setVisible(true);
+                    ModificarSonda.pack();
+
+                    tf_numeroSerieSonda1.setText(actualSonda.getNumSerie());
+                    cb_planetaDestinoSonda1.setSelectedItem(actualSonda.getPlanetaDestino());
+                    tf_velocidadSonda1.setText("" + actualSonda.getVelocidad());
+                    tf_materialSonda1.setText(actualSonda.getMaterial());
+                    tf_pesoSonda1.setText(actualSonda.getPeso() + "");
+
+                }
+            }
+        }
+        actualizarInventario();
+    }//GEN-LAST:event_ModificarActionPerformed
+
+    private void tablaAstronautasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaAstronautasMouseClicked
+        if (evt.isMetaDown()) {
+            ModificarEliminar.show(evt.getComponent(), evt.getX(), evt.getY());
+            actualTabla = tablaAstronautas;
+        }
+    }//GEN-LAST:event_tablaAstronautasMouseClicked
+
+    private void tablaNavesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaNavesMouseClicked
+        if (evt.isMetaDown()) {
+            ModificarEliminar.show(evt.getComponent(), evt.getX(), evt.getY());
+            actualTabla = tablaNaves;
+        }
+    }//GEN-LAST:event_tablaNavesMouseClicked
+
+    private void tablaSondasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaSondasMouseClicked
+        if (evt.isMetaDown()) {
+            ModificarEliminar.show(evt.getComponent(), evt.getX(), evt.getY());
+            actualTabla = tablaNaves;
+        }
+    }//GEN-LAST:event_tablaSondasMouseClicked
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+
+        if (actualTabla == tablaPlanetas) {
+            int pos = actualTabla.getSelectedRow();
+            listPlanetas.remove(pos);
+        } else {
+            if (actualTabla == tablaAstronautas) {
+                int pos = actualTabla.getSelectedRow();
+                listAstronautas.remove(pos);
+            } else {
+                if (actualTabla == tablaNaves) {
+                    DefaultTableModel m = (DefaultTableModel) actualTabla.getModel();
+                    String serial = ((String) m.getValueAt(actualTabla.getSelectedRow(), 0));
+                    for (NaveTripulada n : listNaves) {
+                        if (n.getNumSerie().equals(serial)) {
+                            listNaves.remove(n);
+                            break;
+                        }
+                    }
+                } else {
+                    DefaultTableModel m = (DefaultTableModel) actualTabla.getModel();
+                    String serial = ((String) m.getValueAt(actualTabla.getSelectedRow(), 0));
+                    for (SondaEspacial n : listSondas) {
+                        if (n.getNumSerie().equals(serial)) {
+                            listSondas.remove(n);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        actualizarInventario();
+    }//GEN-LAST:event_EliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1005,15 +1689,24 @@ public class NASA extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CB_nave;
     private javax.swing.JComboBox<String> CB_planeta;
+    private javax.swing.JMenuItem Eliminar;
     private javax.swing.JTabbedPane Expedicion;
+    private javax.swing.JMenuItem Modificar;
+    private javax.swing.JDialog ModificarAstronauta;
     private javax.swing.JPopupMenu ModificarEliminar;
+    private javax.swing.JDialog ModificarNave;
+    private javax.swing.JDialog ModificarPlaneta;
+    private javax.swing.JDialog ModificarSonda;
     private javax.swing.JButton agregar1;
+    private javax.swing.JButton agregar2;
     private javax.swing.JComboBox<String> cb_astronautaNave;
+    private javax.swing.JComboBox<String> cb_astronautaNave1;
     private javax.swing.JComboBox<String> cb_planetaDestinoNave;
+    private javax.swing.JComboBox<String> cb_planetaDestinoNave1;
     private javax.swing.JComboBox<String> cb_planetaDestinoSonda;
+    private javax.swing.JComboBox<String> cb_planetaDestinoSonda1;
     private javax.swing.JLabel estado;
     private javax.swing.JButton jButton1;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1039,16 +1732,36 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1066,28 +1779,50 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JButton jb_crearPlaneta;
     private javax.swing.JButton jb_crearSonda;
     private javax.swing.JButton jb_guardar;
+    private javax.swing.JButton jb_modificarAstronauta;
+    private javax.swing.JButton jb_modificarNave;
+    private javax.swing.JButton jb_modificarPlaneta;
+    private javax.swing.JButton jb_modificarSonda;
     private javax.swing.JRadioButton rd_anillos;
+    private javax.swing.JRadioButton rd_anillos1;
     private javax.swing.JTable tablaAstronautas;
     private javax.swing.JTable tablaNaves;
     private javax.swing.JTable tablaPlanetas;
     private javax.swing.JTable tablaSondas;
     private javax.swing.JTextField tf_distanciaTierra;
+    private javax.swing.JTextField tf_distanciaTierra1;
     private javax.swing.JTextField tf_experiencia;
+    private javax.swing.JTextField tf_experiencia1;
     private javax.swing.JTextField tf_lugarDespejeNave;
+    private javax.swing.JTextField tf_lugarDespejeNave1;
     private javax.swing.JTextField tf_materialSonda;
+    private javax.swing.JTextField tf_materialSonda1;
     private javax.swing.JTextField tf_nacionalidad;
+    private javax.swing.JTextField tf_nacionalidad1;
     private javax.swing.JTextField tf_nombreAstronauta;
+    private javax.swing.JTextField tf_nombreAstronauta1;
     private javax.swing.JTextField tf_nombrePlaneta;
+    private javax.swing.JTextField tf_nombrePlaneta1;
     private javax.swing.JTextField tf_numeroSerieNave;
+    private javax.swing.JTextField tf_numeroSerieNave1;
     private javax.swing.JTextField tf_numeroSerieSonda;
+    private javax.swing.JTextField tf_numeroSerieSonda1;
     private javax.swing.JTextField tf_pesoAstronauta;
+    private javax.swing.JTextField tf_pesoAstronauta1;
     private javax.swing.JTextField tf_pesoSonda;
+    private javax.swing.JTextField tf_pesoSonda1;
     private javax.swing.JTextField tf_sexo;
+    private javax.swing.JTextField tf_sexo1;
     private javax.swing.JTextField tf_sueldo;
+    private javax.swing.JTextField tf_sueldo1;
     private javax.swing.JTextField tf_tempMedia;
+    private javax.swing.JTextField tf_tempMedia1;
     private javax.swing.JTextField tf_tipoSuperficie;
+    private javax.swing.JTextField tf_tipoSuperficie1;
     private javax.swing.JTextField tf_velocidadNave;
+    private javax.swing.JTextField tf_velocidadNave1;
     private javax.swing.JTextField tf_velocidadSonda;
+    private javax.swing.JTextField tf_velocidadSonda1;
     // End of variables declaration//GEN-END:variables
     ArrayList<Planeta> listPlanetas = new ArrayList();
     ArrayList<Astronauta> listAstronautas = new ArrayList();
@@ -1095,4 +1830,7 @@ public class NASA extends javax.swing.JFrame {
     ArrayList<SondaEspacial> listSondas = new ArrayList();
     NaveTripulada actualNave;
     SondaEspacial actualSonda;
+    Planeta actualPlaneta;
+    Astronauta actualAstronauta;
+    JTable actualTabla;
 }
