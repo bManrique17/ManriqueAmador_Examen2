@@ -16,13 +16,31 @@ public class Expedicion extends Thread{
     
     private Planeta planeta;
     private NaveEspacial nave;
-    private JLabel estado;
+    private JLabel estado,sumadora,limite;
 
     public Expedicion(Planeta planeta, NaveEspacial nave, JLabel estado) {
         this.planeta = planeta;
         this.nave = nave;
         this.estado = estado;
     }
+
+    public JLabel getSumadora() {
+        return sumadora;
+    }
+
+    public JLabel getLimite() {
+        return limite;
+    }
+
+    public void setSumadora(JLabel sumadora) {
+        this.sumadora = sumadora;
+    }
+
+    public void setLimite(JLabel limite) {
+        this.limite = limite;
+    }
+    
+    
     
     
 
@@ -65,6 +83,8 @@ public class Expedicion extends Thread{
         long i = (new Double(ida)).longValue();
         long v = (new Double(vuelta)).longValue();
         
+        
+        sumadora.setText("Tiempo de ida: "+(i/1000)+" segundos");
         estado.setText("Llegando al planeta "+planeta.getNombre()+"...");
         try {
             Thread.sleep(i);
@@ -72,7 +92,9 @@ public class Expedicion extends Thread{
             
         }
         JOptionPane.showMessageDialog(null, "La nave "+nave.getNumSerie() + " ha llegado al planeta "+planeta.getNombre());
+        
         estado.setText("Regresando a la tierra...");
+        sumadora.setText("Tiempo de regreso: "+(v/1000)+" segundos");
         try {
             Thread.sleep(v);
         } catch (InterruptedException ex) {
